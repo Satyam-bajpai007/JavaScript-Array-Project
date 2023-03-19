@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Header  -->
+      <header>
+        <h1>Create</h1>
+        <div class="header__box">
+          <div class="group">
+            <div class="box1">
+              <label for="company">Company:</label><br />
+              <input type="text" id="company" />
+            </div>
+            <div class="box2">
+              <label for="model">Model:</label><br />
+              <input type="text" id="model" />
+            </div>
+            <div class="box3">
+              <label for="memory">Memory:</label><br />
+              <input type="number" id="memory" />
+            </div>
+            <div class="box4">
+              <label for="price">Price:</label><br />
+              <input type="number" id="price" />
+            </div>
+            <div class="header__btn">
+              <button onclick="create()">Add</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <hr />
+      <!-- Section Space -->
+      <section>
+        <h1>Display</h1>
+        <div class="section__box">
+          <table>
+            <thead>
+              <tr>
+                <th>Selection</th>
+                <th>Company:</th>
+                <th>Model:</th>
+                <th>Memory(GB):</th>
+                <th>Price(Rs):</th>
+                <th>Quantity</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody id="tbdy"></tbody>
+            <tfoot id="tft"></tfoot>
+          </table>
+        </div>
+      </section>
+      <hr />
+      <!-- Aside Searching  -->
+      <aside>
+        <div class="aside__box">
+          <h1>Searching</h1>
+          <div class="aside__minibox">
+            <select name="select" id="select">
+              <option value="">-Select-</option>
+              <option value="company">Company</option>
+              <option value="model">Model</option>
+              <option value="memory">Memory</option>
+              <option value="price">Price</option>
+            </select>
+            <div class="section__search">
+              <input type="search" id="search" />
+            </div>
+            <div class="section__btn">
+              <button id="search_btn" onclick="searching()">Search</button>
+            </div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Selection</th>
+                <th>Company:</th>
+                <th>Model:</th>
+                <th>Memory(GB):</th>
+                <th>Price(Rs):</th>
+                <th>Quantity</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody id="tbdy1"></tbody>
+            <tfoot id="tft1"></tfoot>
+          </table>
+        </div>
+      </aside>
+      <hr />
+      <!-- Article Sorting  -->
+      <article>
+        <div class="article__box">
+          <h1>Sorting</h1>
+          <div class="article__minibox">
+            <select name="select1" id="select1" onchange="sorting()">
+              <option value="">-Sort-</option>
+              <option value="ascending">Ascending</option>
+              <option value="decending">Decending</option>
+            </select>
+            <select name="select2" id="select2" onchange="sorting()">
+              <option value="">-Sort by-</option>
+              <option value="company">Company</option>
+              <option value="model">Model</option>
+              <option value="memory">Memory</option>
+              <option value="price">Price</option>
+            </select>
+          </div>
+          <div class="article__table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Selection</th>
+                  <th>Company:</th>
+                  <th>Model:</th>
+                  <th>Memory(GB):</th>
+                  <th>Price(Rs):</th>
+                  <th>Quantity</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody id="tbdy2"></tbody>
+              <tfoot id="tft2"></tfoot>
+            </table>
+          </div>
+        </div>
+      </article>
+      <hr />
+      <!-- Nav Deletion  -->
+      <nav>
+        <div class="nav__box">
+          <h1>Deletion</h1>
+          <div class="delete__btn">
+            <button onclick="deletion()">Delete</button>
+          </div>
+        </div>
+      </nav>
+      <hr />
+      <footer>
+        <!-- Footer Updation  -->
+        <div class="footer__box">
+          <h1>Updation</h1>
+          <div class="footer__updation">
+            <div class="updation">
+              <select name="Update" id="updt_lst" onchange="change(value)">
+              </select>
+              <input id="for_updt" type="number" placeholder="Value" />
+              <button onclick="update()">Update</button>
+            </div>
+          </div>
+          <hr />
+          <!-- Footer Bill Generation  -->
+          <h1>Bill Generation</h1>
+          <div class="bill_generation">
+            <select name="bill" id="bill" onchange="bill_gen(value)"></select>
+            <input type="number" id="bill_value" placeholder="Quantity">
+            <button onclick="add_bill()">Add</button>
+            <button onclick="generate_bill()">Bill Generate</button>
+          </div>
+          <div class="bill_table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Selection</th>
+                  <th>Company:</th>
+                  <th>Model:</th>
+                  <th>Memory(GB):</th>
+                  <th>Price(Rs):</th>
+                  <th>Quantity</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody id="tbdy4"></tbody>
+            </table>
+            <p id="p_foot" style="text-align: center;"></p>
+          </div>
+          <hr> 
+          <!-- Footer Product Rating  -->
+          <h1>Product Rating</h1>
+          <div class="product_rating">
+            <select name="choose1" id="choose1" onchange="choice1(value)">
+            </select>
+            <select name="choose2" id="choose2" onchange="choice2(value)">
+              <option value=''>--Select</option>
+              <option value='5'>5</option>
+              <option value='4'>4</option>
+              <option value='3'>3</option>
+              <option value='2'>2</option>
+              <option value='1'>1</option>
+            </select>
+            <button onclick="update1()">Update</button>
+          </div>
+          <!-- Footer Filter  -->
+          <h1>Filter</h1>
+          <div class="filter">
+            <input id="min" type="number" placeholder="Minimum Price" />
+            <input id="max" type="number" placeholder="Maximum Price" />
+            <button onclick="filter()">Search</button>
+          </div>
+          <div class="filter__table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Selection</th>
+                  <th>Company:</th>
+                  <th>Model:</th>
+                  <th>Memory(GB):</th>
+                  <th>Price(Rs):</th>
+                  <th>Quantity</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody id="tbdy3"></tbody>
+              <tfoot id="tft3"></tfoot>
+            </table>
+          </div>
+          <hr />
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="./JS/script.js"></script>
+</html>

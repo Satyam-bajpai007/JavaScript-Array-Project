@@ -1,0 +1,153 @@
+/* Media Query */
+@media only screen and (max-width: 750px){
+    body {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    body {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 7px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    body {
+        font-size: 5px;
+    }
+}
+
+/* container  */
+.container{
+    font-size: 1.4em;
+}
+
+/* Header Section  */
+header h1 {
+    text-align: center;
+}
+
+.header__box {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.header__btn {
+    padding-top: 10px;
+}
+
+
+/* Section Space  */
+section h1 {
+    text-align: center;
+    font-size: 2em;
+
+}
+
+.section__box {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+table {
+    margin: auto;
+    padding: auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* Aside Section  */
+.aside__box h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.aside__minibox {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* Article Section */
+.article__box h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.article__minibox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.article__minibox select {
+    margin-bottom: 10px;
+}
+
+/* nav for deletion */
+
+.nav__box h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.delete__btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* footer for update  */
+.footer__updation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* footer for product rating  */
+.product_rating {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* footer for bill generation  */
+.bill_generation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bill_table {
+    margin-top: 10px;
+}
+
+/* footer for filter  */
+.footer__box h1 {
+    text-align: center;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter__table {
+    margin-top: 10px;
+}
